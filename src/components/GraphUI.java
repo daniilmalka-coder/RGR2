@@ -18,7 +18,7 @@ public class GraphUI extends JPanel {
         Graphics2D g2 = (Graphics2D) g;
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
-        // Масштабування (спрощене для 2-го курсу)
+
         double w = getWidth(), h = getHeight();
         g2.draw(new Line2D.Double(0, h/2, w, h/2)); // Вісь X
         g2.draw(new Line2D.Double(w/2, 0, w/2, h)); // Вісь Y

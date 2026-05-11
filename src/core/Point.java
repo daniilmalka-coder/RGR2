@@ -8,7 +8,7 @@ public class Point {
     public Point(String date, double x, double y) {
         this.date = date; this.x = x; this.y = y;
     }
-    // Гетери та сетери
+
     public String getDate() { return date; }
     public void setDate(String date) { this.date = date; }
     public double getX() { return x; }

@@ -18,15 +18,12 @@ public class App extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
-        // Ініціалізація компонентів
         tableUI = new TableUI();
         graphUI = new GraphUI();
 
-        // Зв'язуємо їх початковим порожнім репозиторієм
         tableUI.getLogic().setRepo(repo);
         graphUI.setRepo(repo);
 
-        // Слухач: коли в таблиці щось міняється — графік перемальовується
         tableUI.getLogic().addListener(e -> graphUI.repaint());
 
         add(tableUI, BorderLayout.WEST);
@@ -38,8 +35,6 @@ public class App extends JFrame {
         JButton saveBtn = new JButton("Зберегти");
         JButton clearBtn = new JButton("Очистити");
         JButton exitBtn = new JButton("Завершити");
-
-        // --- ЛОГІКА КНОПОК ---
 
         // ВІДКРИТИ XML
         openBtn.addActionListener(e -> {
